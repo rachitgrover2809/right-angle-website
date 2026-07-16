@@ -53,7 +53,7 @@ a{color:inherit}
 .fact .n{font-family:'Cormorant Garamond',serif;font-size:34px;color:#F4F0EA;line-height:1}
 .fact .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#F4F0EA;margin-top:6px}
 /* FILTER BAR */
-.filter-bar{background:rgba(239,230,208,.84);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--border);padding:0 48px;display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:100}
+.filter-bar{background:rgba(239,230,208,.84);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--border);padding:0 48px;display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:48px;z-index:100}
 .filter-bar::-webkit-scrollbar{display:none}
 .filter-btn{background:none;border:none;border-bottom:2px solid transparent;padding:16px 15px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);cursor:pointer;white-space:nowrap;transition:color .2s,border-color .2s;flex-shrink:0}
 .filter-btn:hover{color:var(--text)}.filter-btn.active{color:var(--text);border-bottom-color:var(--accent)}
@@ -211,6 +211,7 @@ footer{background:rgba(239,230,208,.85);border-top:1px solid var(--border);color
 .mk-caption{position:absolute;left:0;right:0;bottom:0;padding:44px 24px 20px;background:linear-gradient(transparent,rgba(63,52,30,.9));z-index:3}
 .mk-cap-lbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#e6d2a8;margin-bottom:6px;display:block;font-weight:500}
 .mk-cap-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--cream);line-height:1.35}
+@media(max-width:768px){.mk-caption{padding:44px 78px 20px 24px}}
 .mk-badge{position:absolute;top:16px;left:16px;z-index:4;font-size:9px;letter-spacing:.18em;text-transform:uppercase;background:var(--accent);color:var(--cream);padding:5px 11px;font-weight:600}
 .mk-side{display:flex;flex-direction:column;justify-content:center;gap:22px}
 .mk-side-lead{font-family:'Cormorant Garamond',serif;font-size:25px;font-style:italic;color:var(--accent);line-height:1.4}
@@ -232,11 +233,11 @@ footer{background:rgba(239,230,208,.85);border-top:1px solid var(--border);color
 
 
 /* === UTILITY ICONS (search + cart) === */
-.util-icons{position:fixed;top:18px;right:22px;z-index:250;display:flex;gap:16px;align-items:center;background:rgba(253,250,244,.92);backdrop-filter:blur(8px);padding:8px 14px;border-radius:30px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.util-icons{position:sticky;top:0;z-index:250;display:flex;justify-content:flex-end;align-items:center;gap:16px;background:rgba(253,250,244,.94);backdrop-filter:blur(8px);padding:12px 22px;border-bottom:1px solid var(--border)}
 .util-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;color:var(--text);font-family:"Jost",sans-serif;padding:2px}
 .util-btn svg{width:19px;height:19px;stroke:var(--text);fill:none;stroke-width:1.6}
 .cart-count{font-size:12px;font-weight:600;color:var(--accent)}
-@media(max-width:768px){.util-icons{top:10px;right:10px;padding:6px 10px;gap:12px}}
+@media(max-width:768px){.util-icons{padding:8px 14px;gap:12px}.filter-bar{top:44px}}
 
 /* === CART DRAWER === */
 .cart-overlay{position:fixed;inset:0;background:rgba(20,15,8,.5);z-index:400;display:none;opacity:0;transition:opacity .25s}
